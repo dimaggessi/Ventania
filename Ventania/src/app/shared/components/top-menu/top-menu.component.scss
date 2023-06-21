@@ -1,8 +1,8 @@
 .nav-container {
   display: flex;
   justify-content: space-between;
-  position: fixed;
-  width: 1198px;
+  align-items: center;
+  max-width: 1198px;
   margin-top: 37px;
 
   .logo {
@@ -14,32 +14,33 @@
   .right {
     display: flex;
     align-items: center;
+    font-family: "Podkova", bold;
+    font-size: 18px;
+    color: var(--dark);
 
     .menu-items {
-      font-family: "Podkova", bold;
-      font-size: 18px;
-
       a {
-        text-decoration: none;
-        color: var(--dark);
         margin-right: 54px;
         display: inline-block;
         transition: all 500ms;
       }
+    }
 
-      a.btn {
-        background: #FCE444;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 3px;
-        padding: 20px;
-      }
+    a.btn {
+      background: #FCE444;
+      color: #000000;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 3px;
+      padding: 20px;
+      margin-right: 20px;
+      display: inline-block;
+      transition: all 500ms;
     }
   }
 }
 
 .nav-container .dark-switch,
 .nav-container .light-switch {
-  position: absolute;
   right: 0;
   transform: translateY(-16px);
   opacity: 0;
@@ -53,4 +54,21 @@
   cursor: pointer;
   pointer-events: auto;
   transform: translateY(0);
+}
+
+@media (max-width: 800px)
+{
+  .nav-container .right .menu-items .btn.book {
+    display: block;
+  }
+
+  .nav-container .right .menu-items {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-container {
+    margin-top: 10px;
+  }
 }

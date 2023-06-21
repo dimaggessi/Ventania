@@ -1,9 +1,11 @@
 header {
+  max-height: 660px;
+  margin-top: 19.68px;
   font-family: "Poppins", sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100vh;
+
 }
 
 header .model-image {
@@ -11,6 +13,7 @@ header .model-image {
 }
 
 header .model-image img {
+  height: 100%;
   vertical-align: middle;
   height: 580px;
 }
@@ -22,7 +25,7 @@ header .titles {
 header .titles h1 {
   font-family: "Podkova", bold;
   font-size: 64px;
-  width: 425px;
+  max-width: 425px;
   margin-top: 0;
 }
 
@@ -30,7 +33,7 @@ header .titles p {
   font-size: 20px;
   line-height: 120%;
   margin-top: 16px;
-  width: 523px;
+  max-width: 523px;
   margin-bottom: 42px;
 }
 
@@ -58,4 +61,49 @@ header .btn.light {
 
 h1 {
   font-family: "Podkova", bold;
+}
+
+@media (max-width: 1050px) {
+  header .titles {
+    min-width: 425px;
+  }
+}
+
+@media (max-width: 640px)
+{
+  header {
+    display: inline;
+    flex-direction: column;
+    height: 80vh;
+  }
+
+
+  header .titles h1 {
+    max-width: 350px;
+    font-size: 50px;
+    margin-top: 20px;
+  }
+
+  header .titles p {
+    max-width: 350px;
+    font-size: 14px;
+    position: relative;
+  }
+
+  header .middle-buttons {
+    position: relative;
+    top: 340px;
+  }
+
+  header .btn.disc {
+    margin-right: 10px;
+  }
+
+  header .model-image img {
+    height: 350px;
+    position: relative;
+    top: -80px;
+    margin-left: 40px;
+    align-self: center;
+  }
 }
