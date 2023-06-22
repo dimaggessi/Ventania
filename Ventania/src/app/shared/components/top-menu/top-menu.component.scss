@@ -16,10 +16,11 @@
     align-items: center;
     font-family: "Podkova", bold;
     font-size: 18px;
-    color: var(--dark);
+
 
     .menu-items {
       a {
+        color: var(--button-color);
         margin-right: 54px;
         display: inline-block;
         transition: all 500ms;
@@ -28,7 +29,7 @@
 
     a.btn {
       background: #FCE444;
-      color: #000000;
+      color: var(--black);
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 3px;
       padding: 20px;
@@ -39,21 +40,31 @@
   }
 }
 
-.nav-container .dark-switch,
-.nav-container .light-switch {
-  right: 0;
-  transform: translateY(-16px);
+.nav-container .dark-switch {
   opacity: 0;
+  transform: translateY(-20px);
   pointer-events: none;
-  display: flex;
 }
 
-.nav-container .dark-switch.active,
+.nav-container .light-switch {
+  opacity: 0;
+  transform: translate(-20px, -15px);
+  pointer-events: none;
+}
+
+.nav-container .dark-switch.active {
+  opacity: 1;
+  cursor: pointer;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
 .nav-container .light-switch.active {
   opacity: 1;
   cursor: pointer;
   pointer-events: auto;
   transform: translateY(0);
+  transform: translateX(-15px);
 }
 
 @media (max-width: 800px)

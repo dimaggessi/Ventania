@@ -1,9 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
   --dark: #133F55;
+  --button-color: #133F55;
   --light: #E2F5F3;
   --yellow: #FCE444;
-  --white-bg: #ffffff;
+  --bg: #ffffff;
+  --black: #000000;
+}
+
+
+.dark-theme {
+  --dark: #E2F5F3;
+  --bg: #133F55;
+  --button-color: #FCE444;
+  background: #133F55;
 }
 
 * {
