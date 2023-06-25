@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject, Renderer2 } from '@angular/core';
+import { Component, Inject, Output, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-top-menu',
@@ -11,7 +11,7 @@ export class TopMenuComponent {
   public darkSwitch: boolean = true;
 
   constructor(@Inject(DOCUMENT) private document: Document,
-              private renderer: Renderer2) {
+              @Inject(Renderer2) private renderer: Renderer2) {
   }
 
   ngOnInit(): void {

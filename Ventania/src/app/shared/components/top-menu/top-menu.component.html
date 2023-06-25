@@ -1,16 +1,16 @@
 <div class="nav-container">
   <div class="left">
-    <div class="logo">vN</div>
+    <a routerLink="/home" routerLinkActive="active" class="logo">vN</a>
   </div>
 
   <div class="right">
     <nav class="menu-items">
-      <a href="#">EXPLORE</a>
+      <a routerLink="/home">HOME</a>
       <a href="#">SERVICES</a>
       <a href="#">GALLERY</a>
     </nav>
 
-    <a class="btn book" href="#" >BOOK NOW</a>
+    <a class="btn book" routerLink="/book" routerLinkActive="active">BOOK NOW</a>
 
       <div class="dark-switch" [ngClass]="{'active': darkSwitch}">
         <img src="../assets/dark-switch.svg" (click)="colorTheme()" />
