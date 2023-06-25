@@ -1,0 +1,60 @@
+.gallery {
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.gallery h1 {
+  color: var(--dark);
+  font-family: "Podkova";
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.slider-content {
+  position: relative;
+  max-width: 58rem;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 16 / 9;
+  overflow-x: auto; // stop div overflow
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(61, 91%, 55%, 0.25);
+  border-radius: 0.8rem;
+}
+
+// (1) equal size inside container, (0) shrink (retain the width and not wrap), 100% parent div width
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.slider-nav a {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--yellow);
+  opacity: 0.85;
+  transition: opacity ease 250ms;
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
+}
