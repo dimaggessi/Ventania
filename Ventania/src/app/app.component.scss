@@ -1,9 +1,11 @@
 .content {
+  height: 100vh;
   background: var(--bg);
 }
 
 .container {
-  max-width: 1198px;
+  max-width: 1400px;
+  height: 100%;
   margin: 0 auto;
 }
 
