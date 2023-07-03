@@ -1,0 +1,18 @@
+.content {
+  height: 100vh;
+  background: var(--bg);
+}
+
+.container {
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1210px)
+{
+  .container {
+    margin-left: 10px;
+  }
+}
+

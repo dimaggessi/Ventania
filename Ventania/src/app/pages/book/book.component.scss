@@ -1,0 +1,298 @@
+.book-container {
+  max-height: 750px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+  .titles {
+  margin-top: 70px;
+  font-family: "Podkova", bold;
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+  color: var(--dark);
+
+  .stay {
+    font-size: 40px;
+    flex-basis: 100%;
+    flex-grow: 1;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+}
+
+.switch {
+  position: relative;
+  margin-right: 200px;
+  margin-top: 114px;
+  color: var(--black);
+  font-family: "Podkova", bold;
+  font-size: 18px;
+}
+
+.switch .week {
+  position: absolute;
+  left: 33px;
+  top: 15px;
+  color: var(--yellow);
+  pointer-events: none;
+}
+
+.switch .month {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  pointer-events: none;
+}
+
+.switch .plans-switch {
+  width: 198px;
+  height: 47px;
+  background-color: var(--light);
+  appearance: none;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.switch .plans-switch::before {
+  content: "";
+  position: absolute;
+  height: 37px;
+  width: 90px;
+  border-radius: 24px;
+  background-color: var(--button-dark);
+  top: 50%;
+  transform: translateY(-19px);
+  left: 8px;
+  transition: all 500ms;
+}
+
+.switch .plans-switch:checked::before {
+  left: 96px;
+}
+
+.switch .week.check-week {
+  transition: all 700ms;
+  color: var(--black);
+}
+
+.switch .month.check-month {
+  transition: all 500ms;
+  color: var(--yellow);
+}
+
+.price-table {
+  color: var(--black);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 67px;
+  position: relative;
+
+  h3 {
+    margin-top: 20.82px;
+    margin-left: 28px;
+    font-family: "Podkova", bold;
+    font-size: 20px;
+  }
+
+  h3.premium {
+    color: var(--yellow);
+  }
+
+  .price-container .price {
+    margin-top: 26.41px;
+    margin-left: 28px;
+    font-family: "Podkova", bold;
+    font-size: 36px;
+  }
+
+  .price-container .daily {
+    margin-left: 2px;
+    font-family: "Podkova", regular;
+    font-size: 16px;
+  }
+
+  .description {
+    margin-top: 33.3px;
+    margin-bottom: 5px;
+    margin-left: 28px;
+    font-family: "Poppins", regular;
+    font-size: 14px;
+  }
+
+  .features {
+    margin-left: 28px;
+    list-style: none;
+    padding: 0;
+  }
+
+  .features li {
+    font-family: "Poppins", regular;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .features li::before {
+    content: url('../../../assets/icon-blue.svg');
+  }
+
+  .promo1 {
+    background-color: var(--light);
+    width: 251px;
+    height: 337px;
+    margin-right: 27px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .promo2 {
+    background-color: var(--promo-color);
+    color: var(--light);
+    height: 358px;
+    width: 251px;
+    margin-right: 27px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .yellow-bar {
+      width: 100%;
+    }
+
+    .features {
+      margin-top: 46px;
+    }
+
+    .features li::before {
+      content: url(../../../assets/premium-icon.svg);
+    }
+
+    .content a.btn {
+      background-color: var(--light);
+      color: var(--button-dark);
+    }
+  }
+
+  .promo3 {
+    background-color: var(--light);
+    height: 337px;
+    width: 251px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .features {
+      margin-top: 44px;
+    }
+
+    .content a.btn {
+      margin-top: 5px;
+    }
+  }
+}
+
+.price-table .content {
+  z-index: 200;
+}
+
+.price-table .content .features li::before {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.price-table img.bg-shape {
+  left: 0;
+  width: 100%;
+  transform: translateY(-190px);
+}
+
+.price-table .content a.btn {
+  background-color: var(--button-dark);
+  color: white;
+  display: inline-block;
+  padding: 8px;
+  margin-top: 8px;
+  margin-left: 18px;
+  border-radius: 8px;
+  width: 206px;
+  height: 41px;
+  text-align: center;
+  font-family: "Podkova";
+  font-weight: bold;
+  font-size: 24px;
+}
+
+@media (max-width: 871px) {
+
+  .titles {
+    width: 434px;
+  }
+
+  .switch {
+    margin-top: 0;
+    margin-left: 237px;
+  }
+
+  .price-table {
+    justify-content: flex-start;
+  }
+
+  .price-table .promo1 {
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+
+  .price-table .promo2 {
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+
+  .price-table .promo3 {
+    margin-right: 27px;
+  }
+}
+
+@media (max-width: 430px) {
+
+  .titles {
+    width: 300px;
+  }
+
+  .titles .subtitle {
+    line-height: 120%;
+  }
+
+  .switch {
+    margin-top: 20px;
+    margin-left: 100px;
+  }
+
+  .price-table {
+    margin-top: 5px;
+    justify-content: center;
+  }
+
+  .price-table .promo1 {
+    margin-top: 0;
+  }
+
+  .price-table .promo3 {
+    margin-right: 5px;
+  }
+}
+
+.price-table .promo2.dark {
+  background-color: var(--dark-blue);
+  color: var(--light);
+
+}
+

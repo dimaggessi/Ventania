@@ -1,0 +1,79 @@
+<div class="book-container">
+  <div class="titles">
+    <h1 class="stay">Stay longer. Save more.</h1>
+    <p class="subtitle">
+      We have good plans to save your money.<br>
+      Please choose a plan below that best fits for your interests.
+    </p>
+  </div>
+
+  <div class="switch">
+    <input type="checkbox" class="plans-switch" (change)="onCheck($event)">
+    <span class="week" [ngClass]="{'check-week': isChecked}">Week</span>
+    <span class="month" [ngClass]="{'check-month': isChecked}">Month</span>
+  </div>
+
+  <div class="price-table">
+
+    <div class="promo1">
+      <div class="content">
+        <h3>{{firstTitle}}</h3>
+        <div class="price-container">
+          <span class="price">{{firstPrice}}</span>
+          <span class="daily">{{firstDaily}}</span>
+        </div>
+        <div class="description">
+          Best for individuals who travel alone.
+        </div>
+        <ul class="features">
+          <li>Hair Dryer</li>
+          <li>TV (Cable / Streaming)</li>
+          <li>Dishes and Silverware</li>
+        </ul>
+        <a href="#" class="btn">Select</a>
+      </div>
+      <img class="bg-shape" src="../../../assets/shape1.svg" alt="">
+    </div>
+
+    <div class="promo2">
+      <img class="yellow-bar" src="../../../assets/bg-shape-yellow.svg">
+      <div class="content">
+        <h3 class="premium">{{secondTitle}}</h3>
+        <div class="price-container">
+          <span class="price">{{secondPrice}}</span>
+          <span class="daily">{{secondDaily}}</span>
+        </div>
+        <div class="description">
+          Best for Families
+        </div>
+        <ul class="features">
+          <li class="premium-icon">The best rooms</li>
+          <li class="premium-icon">Indoor Pool</li>
+          <li class="premium-icon">Kitchen</li>
+        </ul>
+        <a href="#" class="btn">Select</a>
+      </div>
+      <img class="bg-shape" src="../../../assets/shape2.svg" alt="">
+    </div>
+
+    <div class="promo3">
+      <div class="content">
+        <h3>{{thirdTitle}}</h3>
+        <div class="price-container">
+          <span class="price">{{thirdPrice}}</span>
+          <span class="daily">{{thirdDaily}}</span>
+        </div>
+        <div class="description">
+          Best for Families
+        </div>
+        <ul class="features">
+          <li>Washer / Dryer</li>
+          <li>Dedicated Workspace</li>
+          <li>Kitchen</li>
+        </ul>
+        <a href="#" class="btn">Select</a>
+      </div>
+      <img class="bg-shape" src="../../../assets/shape1.svg" alt="">
+    </div>
+  </div>
+</div>

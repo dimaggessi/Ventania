@@ -1,0 +1,94 @@
+header {
+  height: 82%;
+  width: 100%;
+  margin-top: 4rem;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .model-image {
+  min-width: 36rem;
+  align-self: flex-end;
+}
+
+header .model-image img {
+  height: 100%;
+  width: 100%;
+}
+
+header .titles {
+  color: var(--dark);
+}
+
+header .titles h1 {
+  font-family: "Podkova", bold;
+  font-size: 4rem;
+  width: 30rem;
+  margin-top: 0;
+}
+
+header .titles p {
+  font-size: 1.25rem;
+  line-height: 120%;
+  margin-top: 1rem;
+  width: 30rem;
+  margin-bottom: 3rem;
+}
+
+header .middle-buttons a {
+  font-family: "Poppins", bold;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--black);
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--black);
+  box-shadow: 0 0.25rem 0.3rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.3rem;
+  display: inline-block;
+  transition: all 500ms;
+}
+
+header .btn.disc {
+  background-color: var(--yellow);
+  margin-right: 2rem;
+}
+
+header .btn.light {
+  background-color: var(--light);
+}
+
+h1 {
+  font-family: "Podkova", bold;
+}
+
+@media (max-width: 900px) {
+
+  header .model-image img {
+    min-width: 30rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+
+  header {
+    display: inline-block;
+  }
+
+  header .titles h1 {
+    font-size: 3rem;
+  }
+
+  header .titles p {
+    width: 20rem;
+    font-size: 1rem;
+  }
+
+  header .btn.disc {
+    background-color: var(--yellow);
+    margin-right: 0.5rem;
+  }
+}
+

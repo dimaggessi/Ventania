@@ -1,0 +1,22 @@
+<div class="nav-container">
+  <div class="left">
+    <a routerLink="/home" class="logo">vN</a>
+  </div>
+
+  <div class="right">
+    <nav class="menu-items">
+      <a routerLink="/home">HOME</a>
+      <a href="#">SERVICES</a>
+      <a routerLink="/gallery">GALLERY</a>
+    </nav>
+
+    <a class="btn book" routerLink="/book" routerLinkActive="active">BOOK NOW</a>
+
+      <div class="dark-switch" [ngClass]="{'active': darkSwitch}">
+        <img src="../assets/dark-switch.svg" (click)="colorTheme()" />
+      </div>
+      <div class="light-switch" [ngClass]="{'active': !darkSwitch}">
+        <img src="../assets/light-switch.svg" (click)="colorTheme()"/>
+      </div>
+  </div>
+</div>
